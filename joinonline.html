@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="membership.css">
+</head>
+<body>
+    <body>
+   <!-- HEADER -->
+    <header class="main-holder">
+    <div class="navbar">
+        <div class="logo">
+        Fit Zone <span>Gym</span>
+        </div>>
+    </div>
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="joinonline.html">Join Online</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+ <section class="membership-hero">
+    <div class="hero-content">
+        <h1>Join Fit Zone Gym</h1>
+            <p>Start your fitness journey today and become part of the Fit Zone community.</p>
+            <a href="#membership-form" class="hero-btn">Join Now</a>
+    </div>
+</section>
+    <!-- Membership Plans -->
+<section class="plans">
+    <div class="section-title">
+        <h2>Choose Your Membership</h2>
+        <p>Select the membership plan that fits your fitness goals.</p>
+    </div>
+    <div class="plan-container">
+    <!-- Basic -->
+    <div class="plan-card">
+        <h3>Basic</h3>
+    <div class="price"> KSh 2,000<span>/ Month</span></div>
+    <ul>
+        <li>✓ Gym access</li>
+        <li>✓ Basic workout programs</li>
+         <li>✓ Locker access</li>
+         <li>✓ Fitness assessment</li>
+    </ul>
+      <a href="#membership-form" class="plan-btn"> Choose Plan</a>
+    </div>
+        <!-- Premium -->
+    <div class="plan-card featured">
+        <div class="popular">Most Popular</div>
+            <h3>Premium</h3>
+        <div class="price">KSh 3,500<span>/ Month</span></div>
+        <ul>
+            <li>✓ Unlimited gym access</li>
+            <li>✓ Personal training</li>
+            <li>✓ Group fitness classes</li>
+            <li>✓ Nutrition guidance</li>
+            <li>✓ Fitness assessment</li>
+        </ul>
+        <a href="#membership-form" class="plan-btn">Choose Plan</a>
+    </div>
+            <!-- Annual -->
+        <div class="plan-card">
+            <h3>Annual</h3>
+            <div class="price">KSh 35,000<span>/ Year</span></div>
+        <ul>
+            <li>✓ Unlimited gym access</li>
+            <li>✓ Personal training</li>
+            <li>✓ All fitness classes</li>
+            <li>✓ Nutrition guidance</li>
+            <li>✓ Priority support</li>
+        </ul>
+         <a href="#membership-form" class="plan-btn">Choose Plan</a>
+        </div>
+    </div>
+    </section>
+    <!-- Membership Form -->
+    <section class="form-section" id="membership-form">
+        <div class="form-container">
+        <div class="form-heading">
+            <h2>Membership Registration</h2>
+            <p>Complete the form below to start your membership.</p>
+        </div>
+        <form action="#" method="post">
+            <div class="form-row">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required >
+            </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+         </div>
+         </div>
+        <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required >
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000" required>   
+        </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="date_of_birth" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+    </select>
+        </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group">
+            <label for="membership">Membership Plan</label>
+    <select id="membership" name="Membership plan" required></select>
+        <option value="">Select Membership</option>
+        <option value="basic">Basic KSh 2000 per month</option>
+        <option value="premium">Premium KSh 3500 per month</option>
+        <option value="annual">annual KSh 35000 per year</option>
+    </select>
+        </div>
+        <div class="form-group">
+        <label for="training-time">Preferred Training Time</label>
+    <select id="training-time" name="training_time" required>
+        <option value="">Select Time</option>
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening </option>                        
+    </select>
+        </div>
+        </div>
+        <div class="form-group">
+         <label for="goals">Fitness Goals</label>
+        <textarea id="goals" name="fitness_goals" rows="5" placeholder="Tell us about your fitness goals..."></textarea>
+        </div>
+        <div class="terms">
+            <label><input type="checkbox" name="terms" required>I agree to the Fit Zone Gym membership terms and conditions.</label>
+        </div>
+        <button type="submit" class="submit-btn">Submit Membership Application</button>
+        </form>
+    </div>
+    </section>
+        <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h2>Fit Zone Gym</h2>
+            <p>Transform your body. Strengthen your mind.Become the best version of yourself.</p>
+        </div>
+        <p class="copyright">&copy; 2026 Fit Zone Gym. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    padding: o;
+    margin: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    /*  header  */
+
+header {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+
+}
+ /* navigation */
+.navbar {
+    display: flex;
+    align-items: center; 
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    height: auto;
+}
+.logo span {
+    color: #f39c12;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: white;
+}
+
+   
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}   /* IMAGE */
+    .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-image: 
+             linear-gradient(   /* makes the image not bright */
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.75)
+        ),
+        url("workout.png");;
+}
+    /* DARK OVERLAY */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+}
+    /* HERO TEXT */
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    left: 60px;
+    bottom: 80px;
+    color: white;
+    max-width: 700px;
+}
+.small-title {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 70px;
+    color: #f5a900;
+}
+
+.hero-content > p:last-of-type {
+    font-size: 22px;
+
+    margin-bottom: 30px;
+}
+
+/* JOIN NOW BUTTON */
+.hero-button {
+    display: inline-block;
+    background-color: #f5a900;
+    color: #111;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 4px;
+}
+
+.hero-button:hover {
+    background-color: white;
+}
+footer {
+    background-color: black;
+    text-align: center;
+    margin-bottom: 0px;
+    color: #999;
+
+}
+

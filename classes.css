@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 93.4%;
+    
+
+}
+ /*  header  */
+
+header {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-sizing: border-box;
+
+}
+ /* navigation */
+.navbar {
+    display: flex;
+    align-items: center; 
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    height: auto;
+}
+.logo span {
+    color: #f39c12;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    color: white;
+}
+
+    /* JOIN BUTTON */
+.join-btn {
+    border: 2px solid #111;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+/* CLASSES PAGE */
+.classes {
+    min-width: 100vh;
+    padding: 50px;
+    /* Gym background image */
+
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    ),
+    url("workout1.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: orange;
+    width: 100%;
+}
+
+    /* Main heading */
+
+.classes h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.classes p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+    font-size: 25px;
+    color: white;
+}
+
+    /* Category headings */
+
+.classes h2 {
+    font-size: 28px;
+    margin: 45px 0 20px;
+    padding-left: 15px;
+    border-left: 5px solid rgb(195, 189, 189);
+} 
+
+    /* Three columns */
+.class-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+} 
+
+    /* Individual class cards */
+.class-card {
+    position: relative;
+    padding: 30px 25px; 
+    min-height: 210px;
+    background: rgba(30, 30, 30, 0.65); /*  creates the square transparent box */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    backdrop-filter: blur(3px); /* it makes the squared transparent box blur */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}  
+
+    /* Card hover effect */
+.class-card:hover {
+    transform: translateY(-5px);
+    background: rgba(20, 20, 20, 0.8); /* turns dark when casor is pointed */
+} 
+    /* Class title */  
+.class-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+} 
+    /* Description */
+.class-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #eeeeee;
+}
+/* Price */
+
+.class-card p strong {
+    color: rgb(243, 240, 240);
+}
+
+    /* Number on each card */
+.class-card::before {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+     width: 32px;
+    height: 32px;
+    background: orange;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+    
+    /* Different number for each card */
+
+.class-card:nth-child(1)::before {
+    content: "1";
+}
+
+.class-card:nth-child(2)::before {
+    content: "2";
+}
+
+.class-card:nth-child(3)::before {
+    content: "3";
+}
+
+
+/* Second row numbering */
+
+
+.class-container:nth-of-type(2) .class-card:nth-child(1)::before {
+    content: "4";
+}
+
+.class-container:nth-of-type(2) .class-card:nth-child(2)::before {
+    content: "5";
+}
+
+.class-container:nth-of-type(2) .class-card:nth-child(3)::before {
+    content: "6";
+}
+
+
+/* Third row numbering */
+.class-container:nth-of-type(3) .class-card:nth-child(1)::before {
+    content: "7";
+}
+
+.class-container:nth-of-type(3) .class-card:nth-child(2)::before {
+    content: "8";
+}
+
+.class-container:nth-of-type(3) .class-card:nth-child(3)::before {
+    content: "9";
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .class-container {
+        grid-template-columns: repeat(2, 1fr);
+           }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .classes {
+        padding: 35px 5%;
+    }
+
+    .classes > h1 {
+        font-size: 32px;
+    }
+
+    .class-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #050505;
+    color: #999;
+}
