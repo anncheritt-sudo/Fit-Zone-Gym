@@ -47,9 +47,11 @@ body {
     font-size: 16px;
     transition: 0.3s;
 }
-nav ul li a:hover,
-nav ul li a.active {
-    color: white;
+/* 7. Active State / Link Hover Effects */
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #f39c12 !important; /* Changes text to your accent orange on hover */
+}
 }
     /* JOIN BUTTON */
 .join-btn {

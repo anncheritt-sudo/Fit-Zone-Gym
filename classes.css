@@ -4,36 +4,47 @@ body {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    width: 93.4%;
-    
-
+    width: 93.4%;   
 }
- /*  header  */
-
-header {
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
+ /* Global Reset to make everything consistent across browsers */
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+/* 1. FORCE THE PAGE ELEMENT TIERS TO FLUSH TO THE WINDOW EDGES */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden; /* Prevents awkward side-to-side wiggle on screens */
+    font-family: Arial, Helvetica, sans-serif;
 }
- /* navigation */
-.navbar {
-    display: flex;
-    align-items: center; 
+
+/* 2. FORCE THE HEADER BOX TO BE TRUE FULL-WIDTH DISPLAY FLUID */
+header.main-holder {
+    background-color: black !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 40px !important;
+    box-sizing: border-box !important;
+    position: relative;
+    z-index: 9999; /* Keeps header cleanly layered above background imagery */
 }
+
 .logo {
     font-size: 25px;
     font-weight: bold;
     color: white;
-    height: auto;
 }
+
 .logo span {
     color: #f39c12;
 }
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -42,16 +53,59 @@ header {
     margin: 0;
     padding: 0;
 }
+
 .navbar ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     transition: 0.3s;
 }
-nav ul li a:hover,
-nav ul li a.active {
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #f39c12;
+}
+
+header.main-holder {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
     color: white;
 }
+
+.logo span {
+    color: #f39c12;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #f39c12;
+}
+
 
     /* JOIN BUTTON */
 .join-btn {

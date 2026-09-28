@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            margin: 0px;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: orange;
-            color: black;
-            padding: 0;
-            flex: 1;
-            width: 90%;
-            }
-          /*  header  */
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-header {
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: orange;
+    color: black;
+}
+
+/* HEADER AND NAVIGATION */
+header.main-holder {
     background-color: black;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    box-sizing: border-box;
+    padding: 14px 40px;
+}
 
-}
- /* navigation */
-.navbar {
-    display: flex;
-    align-items: center; 
-}
 .logo {
     font-size: 25px;
     font-weight: bold;
     color: white;
-    height: auto;
 }
+
 .logo span {
     color: #f39c12;
 }
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -48,66 +48,110 @@ header {
     margin: 0;
     padding: 0;
 }
+
 .navbar ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     transition: 0.3s;
 }
-nav ul li a:hover,
-nav ul li a.active {
-    color: white;
-}
- 
-        main {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 40px;
-            border-radius: 20px;
-        
-        }
-        h1 {
-            text-align: center;
-            font-size: 35px;
-            color: black;
-            margin-top: 15px;
-        }
-        h3 {
-            margin-top: 30px;
-            color: black;
-            text-align: center;
-        }
-        p {
-            line-height: 1.6;
-            text-align: center;
 
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-top: 8px;
-            border: 1px solid black;
-            border-radius: 5px;
-            font-size: 15px;
-        }
-        textarea {
-            resize: vertical;
-        }
-        input:focus, textareafocus {
-            outline: none;
-            border-color: orange;
-        }
-        button {
-            background-color: orangered;
-           align-items: center;
-           border:black;
-           padding: 13px 13px;
-           border-radius: 5px;
-           font-size: 15px;
-           font-weight: bold;
-           cursor:pointer;
-        }
-      .social-links {
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #f39c12;
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* FORM ELEMENTS */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #f39c12;
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+
+button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+/* FOOTER */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+footer p {
+    color: #aaa;
+}
+
+.social-links {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -124,19 +168,18 @@ nav ul li a.active {
 }
 
 .social-links a:hover {
-    transform: translateY(-3px);
-    background-color: #555;
+    background-color: #f39c12;
 }
+
     </style>
 </head>
 <body>
     <!-- HEADER -->
     <header class="main-holder">
-    <div class="navbar">
         <div class="logo">
-        Fit Zone <span>Gym</span>
-        </div>>
-    </div>
+            Fit Zone <span>Gym</span>
+        </div>
+        
         <!-- NAVIGATION -->
         <nav class="navbar">
             <ul>

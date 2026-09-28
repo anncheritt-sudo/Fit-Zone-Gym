@@ -1,42 +1,53 @@
 /* css GENERAL STYLING */
+/* 1. Global Reset - Forces everything to use the exact same clean font family */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: #111;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
+/* 2. Page Reset */
 html {
     scroll-behavior: smooth;
 }
-/*  header  */
 
-header {
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    box-sizing: border-box;
-
+body {
+    background-color: #111;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden;
 }
- /* navigation */
+
+/* 3. Header Container Layout Rules */
+header {
+    background-color: black !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px 40px !important; /* Perfect matching layout spacing */
+    box-sizing: border-box !important;
+}
+
+/* 4. Gym Logo Text Styles */
+.logo {
+    font-size: 25px !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+.logo span {
+    color: #f39c12 !important;
+}
+
+/* 5. Navigation Menu List Sizing Rules */
 .navbar {
     display: flex;
     align-items: center; 
 }
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-    height: auto;
-}
-.logo span {
-    color: #f39c12;
-}
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -45,18 +56,22 @@ header {
     margin: 0;
     padding: 0;
 }
+
+/* 6. Navigation Link Text Specifications */
 .navbar ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    color: white !important;
+    font-size: 16px !important;     /* Locks link font size to 16px */
+    font-weight: normal !important; /* Keeps text from looking too thick */
     transition: 0.3s;
 }
-nav ul li a:hover,
-nav ul li a.active {
-    color: white;
+
+/* 7. Active State / Link Hover Effects */
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #f39c12 !important; /* Changes text to your accent orange on hover */
 }
 
- 
     /* HERO */
 .membership-hero {
     min-height: 500px;

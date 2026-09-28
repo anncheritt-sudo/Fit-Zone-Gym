@@ -44,9 +44,10 @@ header {
     font-size: 16px;
     transition: 0.3s;
 }
-nav ul li a:hover,
-nav ul li a.active {
-    color: white;
+/* 7. Active State / Link Hover Effects */
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #f39c12 !important; /* Changes text to your accent orange on hover */
 }
 
    
@@ -58,19 +59,42 @@ nav ul li a.active {
     flex: 1;
     display: flex;
     justify-content: center;
-}   /* IMAGE */
-    .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    background-image: 
-             linear-gradient(   /* makes the image not bright */
-                rgba(0, 0, 0, 0.75),
-                rgba(0, 0, 0, 0.75)
-        ),
-        url("workout.png");;
+}  /* Container holding the image */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
+
+/* Ensure the image remains responsive */
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* The visual text bubble that appears over the image */
+.image-wrapper .hover-text {
+    position: absolute;
+    bottom: 15px;                  /* Positions text near the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);   /* Perfectly centers the text box horizontally */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #f39c12;                /* Matches your signature gym accent orange */
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;                    /* Keeps text completely hidden initially */
+    transition: opacity 0.3s ease; /* Fades the text in smoothly */
+    pointer-events: none;          /* Prevents the text box from blocking mouse movement */
+}
+
+/* Reveal the custom text block on hover */
+.image-wrapper:hover .hover-text {
+    opacity: 1;                    /* Fades text in beautifully when mouse enters box */
+}
+
     /* DARK OVERLAY */
 .hero::after {
     content: "";
@@ -91,20 +115,19 @@ nav ul li a.active {
     max-width: 700px;
 }
 .small-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
 .hero-content h2 {
-    font-size: 70px;
+    font-size: 50px;
     color: #f5a900;
 }
 
 .hero-content > p:last-of-type {
-    font-size: 22px;
-
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
